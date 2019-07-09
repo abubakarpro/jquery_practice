@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container" style="margin:2% 3%">
+      <button id="btn1">Button_1</button>
+      <button id="btn2">Button_2</button>
+
+      <p>
+        A paragraph is defined as “a group of sentences or a single sentence
+        that forms a unit” (Lunsford and Connors 116). Length and appearance do
+        not determine whether a section in a paper is a paragraph. For instance,
+        in some styles of writing, particularly journalistic styles, a paragraph
+        can be just one sentence long.
+      </p>
+      <h1 id="cord"></h1>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        /* $("#btn1").click(function() {
+          $("p").hide();
+        }); */
+
+        // $("#btn2").click(function() {
+        //   $("p").show();
+        // });
+
+        // $("#btn1").hover(function() {
+        //   $("p").hide();
+        // });
+
+        // $("#btn1").mouseover(function() {
+        //   $("p").show();
+        // });
+
+        // $("#btn2").on("click", function() {
+        //   alert("df");
+        // });
+
+        $(document).mousemove(function(e) {
+          $("#cord").html(
+            "<h1>Cord y: " + e.clientY + "Cory X:" + e.clientX + "</h1>"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

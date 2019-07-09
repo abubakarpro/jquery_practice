@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <title>Document</title>
+
+    <style>
+      body {
+        font-size: 17px;
+        font-family: Arial;
+        background: darkgray;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px #000 solid;
+        margin-bottom: 10px;
+      }
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JQuery Lecture</h1>
+    </header>
+
+    <div id="container">
+      <h1 id="heading1">Heading One</h1>
+      <p id="para1">
+        The jQuery Bower package contains additional files besides the default
+        distribution. In most cases you can ignore these files, however if you
+        wish to download the default release on its own you can use Bower to
+        install jQuery from one of the above urls instead of the registered
+        package. For example, if you wish to install just the compressed jQuery
+        file, you can install just that file with the following command:
+      </p>
+
+      <h1 class="heading2">Heading Two</h1>
+      <p class="para2">
+        Be sure to test web pages that use jQuery in all the browsers you want
+        to support. The Microsoft Developer Resources site makes available
+        virtual machines for testing many different versions of Internet
+        Explorer.
+        <span
+          >Older versions of other browsers can be found at
+          oldversion.com.</span
+        >
+      </p>
+      <ul id="list">
+        <li>item1</li>
+        <li>item1</li>
+        <li>item1</li>
+        <li>item1</li>
+        <li>item1</li>
+        <li>item1</li>
+      </ul>
+
+      <input type="button" value="Button-1" />
+      <input type="submit" value="Submit" />
+      <input type="text" />
+
+      <a href="http://www.google.com">google</a>
+      <a href="http://www.yahoo.com">yahoo</a>
+
+      <h1>sd</h1>
+    </div>
+
+    <script>
+      //********* Selectors **********
+      // $("h1").hide();
+      // $("h1#heading1").hide();
+
+      //Chnge inner Html
+
+      $("h1#heading1")
+        .html("One")
+        .css("color", "red");
+
+      //Creat A Element Node h1
+
+      // const newh1 = $("<h1>").html("new h1");
+
+      //Appending new Element
+      //$("#container").append(newh1);
+
+      //get tag and changed value
+      const a = $("#heading1").html();
+
+      const newh2 = $("<h1>").html(a);
+
+      //$("#container").append(newh2);
+
+      //$("h1.heading2").hide();
+      //$(".heading2").hide();
+
+      //$("p span").css("color", "red");
+
+      //$("ul li").css("color", "red");
+      //$("#list li:first").css("color", "green");
+      //$("ul#list li:last").css("color", "blue");
+
+      //2 chor kr 3rd phr 2 chor kr 3rd
+      //$("#list li:nth-child(3n)").css("color", "black");
+      $("#list li:even").css("color", "blue");
+
+      //grap All button which have type=button
+      //: use for grap All type
+      $(":button").hide();
+
+      $("[href]").css("color", "red");
+      $("[href='http://www.google.com']").css("color", "blue");
+
+      //$("*").hide();
+    </script>
+  </body>
+</html>
